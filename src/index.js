@@ -1,17 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { MainContent } from './mainContent';
+import { Footer } from './footerContent';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const Header = () => {
+  return(
+    <>
+      <nav id='navContainer'>
+        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png' id='reactLogo'></img>
+        <ul id='navMenu'>
+          <li className='navItems'>Pricing</li>
+          <li className='navItems'>About</li>
+          <li className='navItems'>Contact</li>
+        </ul>
+      </nav>
+      <MainContent />
+      <Footer />
+    </>
+  )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+ReactDOM.render(<Header />, document.getElementById("root"))
