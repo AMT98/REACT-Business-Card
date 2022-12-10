@@ -1,3 +1,4 @@
+import React from 'react'
 export const ContactButtons = () => {
     return (
         <div id="contactButtons">
@@ -12,3 +13,4 @@ export const ContactButtons = () => {
         </div>
     )
 }
+
